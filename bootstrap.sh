@@ -30,4 +30,9 @@ pyenv install $release
 pyenv global $release
 pyenv rehash
 
+# Install pyenv-virtualenv for development workflows
+# REF: https://github.com/pyenv/pyenv-virtualenv
+printf "Installing pyenv-virtualenv..."
+git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
+
 printf "Done!"
